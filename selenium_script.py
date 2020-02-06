@@ -3,11 +3,11 @@ import pandas as pd
 
 class CHOOCHOO_Scraper:
     def __init__(self):
-        self.webdriver = "./"
+        self.webdriver = r"C:\users\ahmad\desktop\personal\personal projects\web-user-scrape"
         self.driver = Firefox(self.webdriver)
 
     def scrape(self, pages, pre_url):
-        for page in range(0,pages):
+        for page in range(0, pages):
             url = pre_url + str(page+1)
             self.driver.get(url)
             items = len(self.driver.find_elements_by_class_name("quote"))
